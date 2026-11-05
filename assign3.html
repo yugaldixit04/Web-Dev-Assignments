@@ -1,0 +1,154 @@
+# Assignment 3 – Terminal Navigation Practice Sheet
+
+## Objective
+To understand and practice basic terminal commands for navigating directories, creating files and folders, copying, moving, deleting files, and opening folders in VS Code.
+
+## Part 1: Basic Terminal Commands
+
+### 1. Show Current Folder
+Command: pwd
+
+Explanation: Displays the current working directory.
+
+### 2. List Files
+Command: ls
+
+Explanation: Displays all visible files and folders in the current directory.
+
+### 3. List with Details and Hidden Files
+Command: ls -la
+
+Explanation: Displays all files, including hidden files, with detailed information.
+
+### 4. Create a Folder
+Command: mkdir practice
+
+Explanation: Creates a new folder named practice.
+
+### 5. Enter the Folder
+Command: cd practice
+
+Explanation: Moves into the practice folder.
+
+### 6. Create an Empty File
+Command: touch index.html
+
+Explanation: Creates an empty HTML file named index.html.
+
+### 7. Create Nested Folders
+Command: mkdir -p css/images
+
+Explanation: Creates a css folder and an images subfolder inside it.
+
+### 8. Go Up One Level
+Command: cd ..
+
+Explanation: Moves one directory level backward.
+
+### 9. Go to Home Directory
+Command: cd ~
+
+Explanation: Takes the user to the home directory.
+
+### 10. Copy a File
+Command: cp index.html backup.html
+
+Explanation: Creates a copy of index.html named backup.html.
+
+### 11. Rename or Move a File
+Command: mv backup.html old.html
+
+Explanation: Renames backup.html to old.html.
+
+### 12. Delete a File
+Command: rm old.html
+
+Explanation: Deletes the file named old.html.
+
+### 13. Delete a Folder
+Command: rm -r css
+
+Explanation: Deletes the css folder and its contents.
+
+### 14. Print File Contents
+Command: cat index.html
+
+Explanation: Displays the contents of index.html.
+
+### 15. Clear the Screen
+Command: clear
+
+Explanation: Clears the terminal screen.
+
+### 16. Open Folder in VS Code
+Command: code .
+
+Explanation: Opens the current folder in Visual Studio Code.
+
+---
+
+## Part 2: Practice Exercise
+
+### Task 1: Create the Website Folder Structure
+
+Commands: cd ~
+mkdir -p website/css website/images
+touch website/index.html website/css/style.css
+
+Explanation:
+- cd ~ moves to the home directory.
+- mkdir -p creates the website folder and its subfolders.
+- touch creates the HTML and CSS files.
+
+### Task 2: Enter CSS and Return to Website
+
+Commands:
+cd website/css
+cd ..
+
+Explanation:
+- cd website/css enters the CSS folder.
+- cd .. returns to the website folder.
+
+### Task 3: List Everything Recursively
+
+Command:
+ls -R
+
+Explanation: Displays all files and subfolders recursively.
+
+### Task 4: Rename the HTML File
+
+Commands:
+mv index.html home.html
+mv home.html index.html
+
+Explanation:
+- First command renames index.html to home.html.
+- Second command changes its name back to index.html.
+
+### Task 5: Open the Folder in VS Code
+
+Command:
+code .
+
+Explanation: Opens the current website folder in Visual Studio Code.
+
+---
+
+## Part 3: Expected Folder Structure
+
+website/
+│
+├── index.html
+│
+├── css/
+│   └── style.css
+│
+└── images/
+
+---
+
+## Conclusion
+
+In this assignment, I practiced basic terminal commands for directory navigation, file creation, copying, renaming, deleting, and opening folders in VS Code. These commands help in managing project files and folders efficiently during web development.

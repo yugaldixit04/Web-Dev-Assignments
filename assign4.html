@@ -1,0 +1,116 @@
+# Assignment 4 – Repository with at Least Three Meaningful Commits
+
+## Objective
+To understand Git and GitHub version control by creating a repository and making at least three meaningful commits.
+
+## Part 1: Configure Git Identity
+
+First, configure your Git username and email.
+
+Commands:
+
+git config --global user.name "Your Name"
+
+git config --global user.email "you@example.com"
+
+Explanation:
+- user.name sets the Git username.
+- user.email sets the Git email address.
+- These details are associated with your commits.
+
+## Part 2: Create a Git Repository
+
+Commands:
+
+mkdir html-css-assignments
+
+cd html-css-assignments
+
+git init
+
+git branch -M main
+
+Explanation:
+- mkdir creates a new folder.
+- cd enters the folder.
+- git init initializes a new Git repository.
+- git branch -M main renames the default branch to main.
+
+## Part 3: Make Three Meaningful Commits
+
+### Commit 1: Add README File
+
+Command:
+
+echo "# HTML & CSS Assignments" > README.md
+
+git add README.md
+
+git commit -m "docs: add README with project overview"
+
+Explanation:
+Creates a README file and saves it in Git history with a meaningful commit message.
+
+### Commit 2: Add Setup and Git Assignments
+
+Commands:
+
+cp -r /path/to/this/folder/assignments .
+
+git add 01-*.md 02-*.md 03-*.md 04-*.md 05-*.md
+
+git commit -m "docs: add setup & git assignments (1-5)"
+
+Explanation:
+Copies assignment files into the repository, stages them, and creates the second commit.
+
+### Commit 3: Add HTML Basics Assignments
+
+Commands:
+
+git add 06-*.html 07-*.html 08-*.html 09-*.html 10-*.html
+
+git commit -m "feat: add HTML basics assignments (6-10)"
+
+Explanation:
+Stages HTML assignment files and creates the third commit.
+
+## Part 4: Check Commit History
+
+Command:
+
+git log --oneline
+
+Explanation:
+Displays the Git commit history in a short format. It helps verify that at least three meaningful commits have been created.
+
+## Part 5: Good Commit Message Rules
+
+1. Use present tense and imperative words.
+2. Write short and meaningful commit messages.
+3. Use prefixes such as:
+   - feat: New features
+   - fix: Bug fixes
+   - docs: Documentation changes
+   - style: Formatting changes
+   - refactor: Code improvements
+4. Keep one logical change in each commit.
+
+## Part 6: Suggested Commit History for the Whole Course
+
+| Commit | Message |
+|--------|---------|
+| 1 | docs: add README |
+| 2 | docs: setup & git assignments (1-5) |
+| 3 | feat: HTML basics (6-10) |
+| 4 | feat: links, images, lists (11-15) |
+| 5 | feat: forms, tables, metadata (16-20) |
+| 6 | style: CSS fundamentals (21-25) |
+| 7 | style: box model & positioning (26-30) |
+| 8 | feat: flexbox layouts (31-35) |
+| 9 | feat: grid layouts (36-40) |
+| 10 | feat: responsive landing page (41-45) |
+
+## Conclusion
+
+In this assignment, I learned how to configure Git, initialize a repository, add files, create meaningful commits, and check commit history. I also understood the importance of proper commit messages and version control in software development.

@@ -1,0 +1,36 @@
+//Assignment 1 - what happen between typing a url and seeing the page ?
+
+When you press Enter after typing a URL, your browser doesn't just download a static file—it executes a tightly choreographed performance involving network routing, security encryption, and complex browser engine calculations, often completed in under 200 milliseconds.
+
+To look closer at what happens during this brief window, we can split the journey into two distinct phases: The Network Round-Trip and The Browser Rendering Pipeline.
+
+Phase 1: The Network Journey (Finding and Fetching)
+Before a single pixel can appear, your device must locate the server and safely download the website's assets:
+
+Local Cache Check: The browser checks its memory, operating system cache, and router cache to see if it already knows the website's IP address.
+
+DNS Resolution: If not cached, it queries a Domain Name System (DNS) server to translate the human-readable domain name (like example.com) into a numerical IP address.
+
+TCP Connection (3-Way Handshake): Your computer and the server establish a reliable connection by sending SYN, SYN-ACK, and ACK packets.
+
+TLS Handshake (Secure HTTPS): If the site uses HTTPS, cryptographic keys are exchanged to ensure all data transferred remains encrypted and private.
+
+HTTP Request & Response: The browser sends an HTTP GET request. The server processes it and sends back the initial response containing HTML. The time it takes for the first byte of data to arrive is known as TTFB (Time to First Byte).
+
+Phase 2: The Rendering Pipeline (Building the Page)
+Once the HTML streams in, the browser's rendering engine takes over immediately, processing the bytes into the visual page you see:
+
+Opens in a new window
+An Introduction to the Browser Rendering Pipeline
+The browser rendering pipeline. Source: Web Performance Tips
+Parsing HTML & Building the DOM: As HTML bytes arrive, the browser converts them into tokens and builds the Document Object Model (DOM) tree, which represents the page's structure.
+
+Fetching External Assets: While parsing, the browser encounters links to stylesheets (CSS), scripts (JavaScript), and images, immediately firing off parallel requests to fetch them.
+
+Building the CSSOM: CSS files are parsed into the CSS Object Model (CSSOM), defining how elements should look (colors, fonts, layouts).
+
+Creating the Render Tree: The DOM and CSSOM are combined into a Render Tree, filtering out elements that aren't displayed (like <head> or display: none).
+
+Layout (Reflow): The browser calculates the exact geometric size and position of every visible element on the screen.
+
+Paint & Composite: The final step rasterizes the elements—drawing pixels onto the screen layers and sending them to the GPU to display the fully rendered webpage.

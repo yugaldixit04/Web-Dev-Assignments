@@ -1,0 +1,83 @@
+# Assignment 5 – GitHub Repository Link
+
+## Objective
+To upload a local Git repository to GitHub and generate a shareable repository link.
+
+## Part 1: Create a New GitHub Repository
+
+Steps:
+
+1. Open GitHub (https://github.com).
+2. Log in to your GitHub account.
+3. Click on the **New Repository** button.
+4. Enter the repository name: `html-css-assignments`.
+5. Select Public or Private as required.
+6. Leave the repository empty (do not initialize it with a README file).
+7. Click on **Create Repository**.
+
+Explanation:
+A GitHub repository is an online storage space used to manage and share project files and their version history.
+
+## Part 2: Connect the Local Repository to GitHub
+
+Open the VS Code terminal inside your local project folder.
+
+Run the following commands:
+
+git remote add origin https://github.com/<your-username>/html-css-assignments.git
+
+git branch -M main
+
+git push -u origin main
+
+Explanation:
+
+- `git remote add origin` connects the local repository to GitHub.
+- `git branch -M main` sets the branch name to main.
+- `git push -u origin main` uploads local commits and files to GitHub.
+
+Note: Replace `<your-username>` with your actual GitHub username.
+
+## Part 3: Verify the Repository
+
+Steps:
+
+1. Open your GitHub repository.
+2. Refresh the page.
+3. Check whether all project files are visible.
+4. Open the Commits section.
+5. Verify that your commit history is displayed correctly.
+
+Explanation:
+This confirms that the local repository has been successfully uploaded to GitHub.
+
+## Part 4: Optional – Host the Website Using GitHub Pages
+
+Steps:
+
+1. Open your GitHub repository.
+2. Go to Settings.
+3. Click on Pages.
+4. Under Build and Deployment, select Deploy from a branch.
+5. Select the `main` branch.
+6. Select the `/ (root)` folder.
+7. Click Save.
+
+Your website will be available at:
+
+https://<your-username>.github.io/html-css-assignments/
+
+Explanation:
+GitHub Pages is a free hosting service that allows users to publish static websites directly from a GitHub repository.
+
+## Part 5: Submission
+
+Repository Link:
+
+https://github.com/<your-username>/html-css-assignments
+
+Replace `<your-username>` with your actual GitHub username.
+
+## Conclusion
+
+In this assignment, I learned how to create a GitHub repository, connect it with a local Git repository, push files to GitHub, and verify uploaded commits. I also learned how to host a static website using GitHub Pages.
